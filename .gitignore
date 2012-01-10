@@ -1,0 +1,10 @@
+**ReSharper**
+**bin**
+**obj**
+*.suo
+*.sdf
+*.opensdf
+*.user
+*.userprefs
+*.pidb
+.DS_Store
