@@ -1,4 +1,4 @@
-﻿namespace webkitrenderertest
+﻿namespace WebKitRendererTest
 {
     partial class OutputPreview
     {

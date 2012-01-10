@@ -26,19 +26,16 @@ namespace WebKit
 
             this.Width   = size.Width;
             this.Height  = size.Height;
-            this.BackColor = Color.Transparent;
             this.Load    += OnLoad;
-
-            RecreateHandle();
         }
 
         protected override CreateParams CreateParams
         {
             get
             {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle |= 0x00000020; // WS_EX_TRANSPARENT
-                return cp;
+                var createParams = base.CreateParams;
+                createParams.ExStyle |= 0x00000020; // WS_EX_TRANSPARENT
+                return createParams;
             }
         }
 
@@ -73,10 +70,7 @@ namespace WebKit
             
             _webView.initWithFrame(frameRect, null, null);
             _webView.setTransparent(TRUE);
-
             //_webView.setUsesLayeredWindow(TRUE);
-
-            _webFrame = _webView.mainFrame();
         }
 
         public void Navigate(string uri)
@@ -101,11 +95,16 @@ namespace WebKit
             _activationContext.Deactivate();
         }
 
+        public void Render(Graphics graphics)
+        {
+            NativeControlPainter.PaintControl(graphics, this);
+        }
+
         private void NavigationComplete()
         {
             this.NagivationComplete.Invoke(this, new EventArgs());
         }
-
+        
         private const int     TRUE     = 1;
         private const int     FALSE    = 0;
         private const double  TIMEOUT  = 60.0;
@@ -118,7 +117,5 @@ namespace WebKit
         private readonly WebFrameLoadDelegate    _webFrameLoadDelegate;
         private readonly WebUIDelegate           _webUIDelegate;
         private readonly WebDownloadDelegate     _webDownloadDelegate;
-
-        private IWebFrame                        _webFrame;
     }
 }

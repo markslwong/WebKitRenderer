@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace webkitrenderertest
+namespace WebKitRendererTest
 {
     static class Program
     {

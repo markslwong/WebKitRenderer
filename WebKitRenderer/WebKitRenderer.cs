@@ -39,7 +39,7 @@ namespace WebKit
         {
             _renderTargetCache.Clear(Color.Transparent);
 
-            NativeControlPainter.PaintControl(_renderTargetCache, _webKitControl);
+            _webKitControl.Render(_renderTargetCache);
 
             _applicationContext.ExitThread();
         }

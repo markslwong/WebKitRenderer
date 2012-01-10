@@ -6,33 +6,22 @@ using System.Windows.Forms;
 
 public static class NativeControlPainter
 {
-    private const int PRF_NON_CLIENT       = 0x2;
-    private const int PRF_CLIENT           = 0x4;
-    private const int PRF_CHILDREN         = 0x10;
-    private const int WM_PRINT             = 0x317;
-    private const int WM_PRINTCLIENT       = 0x318;
-    private const int COMBINED_PRINTFLAGS  = PRF_NON_CLIENT | PRF_CLIENT | PRF_CHILDREN;
+    private const int PRF_CLIENT    = 0x4;
+    private const int PRF_CHILDREN  = 0x10;
+    private const int WM_PRINT      = 0x317;
 
     [DllImport("USER32.DLL")]
     private static extern int SendMessage(IntPtr hWnd, int msg, IntPtr wParam, int lParam);
     
-    [DllImport("GDI32.dll")]
-    private static extern int SetBkMode(IntPtr hDc, int iBkMode);
-
-    [DllImport("GDI32.dll")]
-    private static extern int SetBkColor(IntPtr hDc, int crColor);
-    
     public static void PaintControl(Graphics graphics, Control control)
     {
-        var mode = graphics.CompositingMode = CompositingMode.SourceCopy;
+        var mode  = graphics.CompositingMode = CompositingMode.SourceCopy;
 
-        IntPtr hWnd  = control.Handle;
-        IntPtr hDC   = graphics.GetHdc();
+        var hWnd  = control.Handle;
+        var hDC   = graphics.GetHdc();
 
-        SendMessage(hWnd, WM_PRINT, hDC, COMBINED_PRINTFLAGS);
+        SendMessage(hWnd, WM_PRINT, hDC, PRF_CLIENT | PRF_CHILDREN);
 
         graphics.ReleaseHdc(hDC);
     }
-
-
 }

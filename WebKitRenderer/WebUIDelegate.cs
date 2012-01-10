@@ -6,8 +6,7 @@ namespace WebKit
 {
     internal class WebUIDelegate : IWebUIDelegate
     {
-        public void addCustomMenuDrawingData(WebView sender, int hMenu)
-        {}
+        public void addCustomMenuDrawingData(WebView sender, int hMenu) {}
 
         public int canRedo()
         {
@@ -29,11 +28,9 @@ namespace WebKit
             throw new NotImplementedException();
         }
 
-        public void cleanUpCustomMenuDrawingData(WebView sender, int hMenu)
-        {}
+        public void cleanUpCustomMenuDrawingData(WebView sender, int hMenu) {}
 
-        public void contextMenuItemSelected(WebView sender, IntPtr item, CFDictionaryPropertyBag element)
-        {}
+        public void contextMenuItemSelected(WebView sender, IntPtr item, CFDictionaryPropertyBag element) {}
 
         public int contextMenuItemsForElement(WebView sender, CFDictionaryPropertyBag element, int defaultItemsHMenu)
         {
@@ -60,14 +57,11 @@ namespace WebKit
             throw new NotImplementedException();
         }
 
-        public void drawCustomMenuItem(WebView sender, IntPtr drawItem)
-        {}
+        public void drawCustomMenuItem(WebView sender, IntPtr drawItem) {}
 
-        public void drawFooterInRect(WebView WebView, ref tagRECT rect, int drawingContext, uint pageIndex, uint pageCount)
-        {}
+        public void drawFooterInRect(WebView WebView, ref tagRECT rect, int drawingContext, uint pageIndex, uint pageCount) {}
 
-        public void drawHeaderInRect(WebView WebView, ref tagRECT rect, int drawingContext)
-        {}
+        public void drawHeaderInRect(WebView WebView, ref tagRECT rect, int drawingContext) {}
 
         public string ftpDirectoryTemplatePath(WebView WebView)
         {
@@ -84,32 +78,23 @@ namespace WebKit
             throw new NotImplementedException();
         }
 
-        public void makeFirstResponder(WebView sender, int responderHWnd)
-        {}
+        public void makeFirstResponder(WebView sender, int responderHWnd) {}
 
-        public void measureCustomMenuItem(WebView sender, IntPtr measureItem)
-        {}
+        public void measureCustomMenuItem(WebView sender, IntPtr measureItem) {}
 
-        public void mouseDidMoveOverElement(WebView sender, CFDictionaryPropertyBag elementInformation, uint modifierFlags)
-        {}
+        public void mouseDidMoveOverElement(WebView sender, CFDictionaryPropertyBag elementInformation, uint modifierFlags) {}
 
-        public void paintCustomScrollCorner(WebView WebView, ref _RemotableHandle hDC, tagRECT rect)
-        {}
+        public void paintCustomScrollCorner(WebView WebView, ref _RemotableHandle hDC, tagRECT rect) {}
 
-        public void paintCustomScrollbar(WebView WebView, ref _RemotableHandle hDC, tagRECT rect, WebScrollBarControlSize size, uint state, WebScrollbarControlPart pressedPart, int vertical, float value, float proportion, uint parts)
-        {}
+        public void paintCustomScrollbar(WebView WebView, ref _RemotableHandle hDC, tagRECT rect, WebScrollBarControlSize size, uint state, WebScrollbarControlPart pressedPart, int vertical, float value, float proportion, uint parts) {}
 
-        public void printFrame(WebView WebView, IWebFrame frame)
-        {}
+        public void printFrame(WebView WebView, IWebFrame frame) {}
 
-        public void redo()
-        {}
+        public void redo() {}
 
-        public void registerUndoWithTarget(IWebUndoTarget target, string actionName, object actionArg)
-        {}
+        public void registerUndoWithTarget(IWebUndoTarget target, string actionName, object actionArg) {}
 
-        public void removeAllActionsWithTarget(IWebUndoTarget target)
-        {}
+        public void removeAllActionsWithTarget(IWebUndoTarget target) {}
 
         public int runBeforeUnloadConfirmPanelWithMessage(WebView sender, string message, IWebFrame initiatedByFrame)
         {
@@ -121,8 +106,7 @@ namespace WebKit
             throw new NotImplementedException();
         }
 
-        public void runJavaScriptAlertPanelWithMessage(WebView sender, string message)
-        {}
+        public void runJavaScriptAlertPanelWithMessage(WebView sender, string message) {}
 
         public int runJavaScriptConfirmPanelWithMessage(WebView sender, string message)
         {
@@ -134,47 +118,33 @@ namespace WebKit
             throw new NotImplementedException();
         }
 
-        public void runModal(WebView WebView)
-        {}
+        public void runModal(WebView WebView) {}
 
-        public void runOpenPanelForFileButtonWithResultListener(WebView sender, IWebOpenPanelResultListener resultListener)
-        {}
+        public void runOpenPanelForFileButtonWithResultListener(WebView sender, IWebOpenPanelResultListener resultListener) {}
 
-        public void setActionTitle(string actionTitle)
-        {}
+        public void setActionTitle(string actionTitle) {}
 
-        public void setContentRect(WebView sender, ref tagRECT contentRect)
-        {}
+        public void setContentRect(WebView sender, ref tagRECT contentRect) {}
 
-        public void setFrame(WebView sender, ref tagRECT frame)
-        {}
+        public void setFrame(WebView sender, ref tagRECT frame) {}
 
-        public void setMenuBarVisible(WebView WebView, int visible)
-        {}
+        public void setMenuBarVisible(WebView WebView, int visible) {}
 
-        public void setResizable(WebView sender, int resizable)
-        {}
+        public void setResizable(WebView sender, int resizable) {}
 
-        public void setStatusBarVisible(WebView sender, int visible)
-        {}
+        public void setStatusBarVisible(WebView sender, int visible) {}
 
-        public void setStatusText(WebView sender, string text)
-        {}
+        public void setStatusText(WebView sender, string text) {}
 
-        public void setToolbarsVisible(WebView sender, int visible)
-        {}
+        public void setToolbarsVisible(WebView sender, int visible) {}
 
-        public void shouldPerformAction(WebView WebView, uint itemCommandID, uint sender)
-        {}
+        public void shouldPerformAction(WebView WebView, uint itemCommandID, uint sender) {}
 
-        public void takeFocus(WebView sender, int forward)
-        {}
+        public void takeFocus(WebView sender, int forward) {}
 
-        public void trackCustomPopupMenu(WebView sender, int hMenu, ref tagPOINT point)
-        {}
+        public void trackCustomPopupMenu(WebView sender, int hMenu, ref tagPOINT point){}
 
-        public void undo()
-        {}
+        public void undo() {}
 
         public int validateUserInterfaceItem(WebView WebView, uint itemCommandID, int defaultValidation)
         {
@@ -186,8 +156,7 @@ namespace WebKit
             throw new NotImplementedException();
         }
 
-        public void webViewClose(WebView sender)
-        {}
+        public void webViewClose(WebView sender) {}
 
         public tagRECT webViewContentRect(WebView sender)
         {
@@ -199,8 +168,7 @@ namespace WebKit
             throw new NotImplementedException();
         }
 
-        public void webViewFocus(WebView sender)
-        {}
+        public void webViewFocus(WebView sender) {}
 
         public float webViewFooterHeight(WebView WebView)
         {
@@ -232,19 +200,16 @@ namespace WebKit
             throw new NotImplementedException();
         }
 
-        public void webViewShow(WebView sender)
-        {}
+        public void webViewShow(WebView sender) {}
 
         public string webViewStatusText(WebView sender)
         {
             throw new NotImplementedException();
         }
 
-        public void webViewUnfocus(WebView sender)
-        {}
+        public void webViewUnfocus(WebView sender) {}
 
-        public void willPerformDragDestinationAction(WebView WebView, WebDragDestinationAction action, IDataObject draggingInfo)
-        {}
+        public void willPerformDragDestinationAction(WebView WebView, WebDragDestinationAction action, IDataObject draggingInfo) {}
 
         public IDataObject willPerformDragSourceAction(WebView WebView, WebDragSourceAction action, ref tagPOINT point, IDataObject pasteboard)
         {
